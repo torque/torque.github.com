@@ -14,20 +14,45 @@ body
 	background: #d0d0d0;
 }
 
-#content
+div#noscript
 {
-  color: #2f2f2f;
-  font-size: 300%;
-  font-family: 'SignikaSemibold', Arial, sans-serif;
-  text-align: center;
-  border: 5px solid #d0d0d0;
-  text-shadow: 0 0 4px #949494,
-               0 1px 0 #ffffff;
-  margin: 75 0 0 5;
-  display: inline-block;
+  visibility: hidden;
 }
 
-div::selection
+div#content
+{
+  color: transparent;
+  text-align: center;
+  border: 5px solid #d0d0d0;
+  margin: 25 0 25 0;
+  display: inline-block;
+  text-shadow: 0 0 4px transparent,
+               0 1px 0 transparent;
+  -webkit-transition: color 1s linear, text-shadow 1s linear;
+  font: 300% SignikaSemibold, sans-serif;
+}
+
+div.opaque
+{
+  opacity: 1;
+  color: #2f2f2f;
+  text-shadow: 0 0 4px #949494,
+               0 1px 0 #ffffff;
+}
+
+div.small
+{
+  font-size: 40%;
+}
+
+div#content:hover
+{
+  color: #2f2f2f;
+  text-shadow: 0 0 4px #949494,
+               0 1px 0 #ffffff;
+}
+
+::selection
 {
   background: #aaa;
 }
