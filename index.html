@@ -5,9 +5,8 @@ title: Incremental Evolution
 <div style="width: 100%; text-align: center;">
   <div id="allposts">
     {% for post in site.posts %}
-        <div id="title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-        <div id="date">{{ post.date | date: "%Y.%m.%d" }}</div><br>
-      </tr>{% endfor %}
-    </ul>
+        <span class="title"><a href="{{ post.url }}">{{ post.title }}</a></span>
+        <span class="date">{{ post.date | date: "%Y.%m.%d" }}</span><br>
+    {% endfor %}
   </div>
 </div>
