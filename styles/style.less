@@ -80,10 +80,15 @@ div#header
   {
     text-decoration: none;
     padding: 0 0 0 0;
+    margin: 0 0 0 0;
     border-radius: 0;
     &:visited
     {
       color: @txtColor;
+    }
+    &:hover
+    { 
+      background: transparent;
     }
   }
 }
@@ -102,11 +107,11 @@ div#allposts
   -moz-box-shadow: 0 0 10px #bbb;
   -webkit-box-shadow: 0 0 10px #bbb;
   box-shadow: 0 0 10px #bbb;
-  #title
+  .title
   {
     float: left;
   }
-  #date
+  .date
   {
     float: right;
   }
@@ -146,17 +151,15 @@ div#posttitle
 a
 {
   text-decoration: none;
-  padding: 0 2px 0 2px;
-  margin: 0 -2px 0 -2px;
+  padding: 1px 2px 0 2px;
+  margin: -1px -2px 0 -2px;
   border-radius: 3px;
   -webkit-transition: background 0.25s linear;
   -moz-transition: background 0.25s linear;
-  &:link { color: lighten(@txtColor, 15%);
-}
+  &:link { color: lighten(@txtColor, 15%);}
   &:visited { color: lighten(@txtColor, 15%); }
   &:hover
   { 
     background: #d0d0d0;
-    border-radius: 3px;
   }
 }
