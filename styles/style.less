@@ -1,17 +1,44 @@
 @font-face {
   font-family: 'SignikaSemibold';
-  src: url('../fonts/Signika-Semibold-webfont.eot');
-  src: url('../fonts/Signika-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Signika-Semibold-webfont.woff') format('woff'),
-       url('../fonts/Signika-Semibold-webfont.ttf') format('truetype'),
-       url('../fonts/Signika-Semibold-webfont.svg#SignikaSemibold') format('svg');
+  src: url('/fonts/Signika-Semibold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+    font-family: 'GandhiSans';
+    src: url('/fonts/GandhiSans-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GandhiSans';
+    src: url('/fonts/GandhiSans-Italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'GandhiSans';
+    src: url('/fonts/GandhiSans-Bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GandhiSans';
+    src: url('/fonts/GandhiSans-BoldItalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@bgColor: #d0d0d0;
+@txtColor: #333;
+
 body
 {
-	background: #d0d0d0;
+	background: @bgColor;
 }
 
 div#noscript
@@ -19,11 +46,11 @@ div#noscript
   visibility: hidden;
 }
 
-div#content
+div#header
 {
   color: transparent;
   text-align: center;
-  border: 5px solid #d0d0d0;
+  width: 800px;
   margin: 25 0 25 0;
   display: inline-block;
   text-shadow: 0 0 4px transparent,
@@ -31,29 +58,105 @@ div#content
   -webkit-transition: color 1s linear, text-shadow 1s linear;
   -moz-transition: color 1s linear, text-shadow 1s linear;
   font: 300% SignikaSemibold, sans-serif;
+
+  div#opaque
+  {
+    opacity: 1;
+    color: @txtColor;
+    text-shadow: 0 0 4px #949494,
+                 0 1px 0 #fff;
+  }
+  div#small
+  {
+    font-size: 40%;
+  }
+  &:hover
+  {
+    color: @txtColor;
+    text-shadow: 0 0 4px #949494,
+                 0 1px 0 #fff;
+  }
+  a
+  {
+    text-decoration: none;
+    padding: 0 0 0 0;
+    border-radius: 0;
+    &:visited
+    {
+      color: @txtColor;
+    }
+  }
 }
 
-div#opaque
+div#allposts
 {
-  opacity: 1;
-  color: #2f2f2f;
-  text-shadow: 0 0 4px #949494,
-               0 1px 0 #ffffff;
+  width: 774px;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 14px 10px 12px;
+  color: @txtColor;
+  font-family: 'GandhiSans';
+  font-size: 120%;
+  background-color: #bbb;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 10px #bbb;
+  -webkit-box-shadow: 0 0 10px #bbb;
+  box-shadow: 0 0 10px #bbb;
+  #title
+  {
+    float: left;
+  }
+  #date
+  {
+    float: right;
+  }
 }
 
-div#small
+div#postbody
 {
-  font-size: 40%;
+  width: 776px;
+  display: inline-block;
+  font-size: 120%;
+  text-align: justify;
+  padding: 10px 12px 0 12px;
+  background-color: #bbb;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 10px #bbb;
+  -webkit-box-shadow: 0 0 10px #bbb;
+  box-shadow: 0 0 10px #bbb;
 }
 
-div#content:hover
+div#content
 {
-  color: #2f2f2f;
-  text-shadow: 0 0 4px #949494,
-               0 1px 0 #ffffff;
+  font: 18px 'GandhiSans', sans-serif;
+}
+
+div#posttitle
+{
+  font: 18px 'GandhiSans', sans-serif;
+  font-size: 200%;
+  font-style: italic;
 }
 
 ::selection
 {
   background: #aaa;
+}
+
+a
+{
+  text-decoration: none;
+  padding: 0 2px 0 2px;
+  margin: 0 -2px 0 -2px;
+  border-radius: 3px;
+  -webkit-transition: background 0.25s linear;
+  -moz-transition: background 0.25s linear;
+  &:link { color: lighten(@txtColor, 15%);
+}
+  &:visited { color: lighten(@txtColor, 15%); }
+  &:hover
+  { 
+    background: #d0d0d0;
+    border-radius: 3px;
+  }
 }
