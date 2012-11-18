@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Post, The First
+description: In which The Author discusses the creation of this blog in a supremely confusing and roundabout way.
+date: Fri Jun 1 23:57:52 2012
+updated: Sun Nov 18 02:23:39 2012
 ---
 
 This is a thing. To be precise, it is a _thing_.
@@ -13,6 +16,6 @@ These two categories are quite obviously not mutually exclusive. Oftentimes an i
 
 So what does that have to do with this... _thing_? Well, to be perfectly frank, not much. It's a thought that formulated in my mind when I was contemplating whether or not I should create this. That, and it's probably a good example of the sort of soppy and probably erroneous "logic" that will likely be prevalent in everything I write here.
 
-To get back on topic (or, more accurately, switch to a different topic entirely), I came to the conclusion that a blog based on git (or any version control system, really) offers unique opportunities that aren't present in your typical wordpress blogging platform. One of the things I like a lot about git is that it allows you to see exactly how something has matured and developed over time. It provides discreet snapshots of the various stages of development, and this is what inspired the name Incremental Evolution. I plan to treat this as a codebase (blogbase if you will) that will have its pieces updated and evolve as a body over time.
+To get back on topic (or, more accurately, switch to a different topic entirely), I came to the conclusion that a blog based on git (or any version control system, really) offers unique opportunities that aren't present in your typical wordpress blogging platform. One of the things I like a lot about git is that it allows you to see exactly how something has matured and developed over time. It provides discreet snapshots of the various stages of development, and this is what inspired "Incremental Evolution". I plan to treat this as a codebase (or blogbase, if you will) that will have its pieces updated and evolve as a body over time.
 
 Well, we'll see how that goes.
