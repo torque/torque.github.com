@@ -1,0 +1,30 @@
+<html>
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" type="text/css" href="/styles/style.css">
+  <!-- <link rel="stylesheet/less" type="text/css" href="/styles/style.less"> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script> -->
+  <script src="/scripts/strings.js" type="text/javascript"></script>
+  <!-- <script src="/scripts/interface.js" type="text/javascript"></script> -->
+  <title>{{ page.title }}</title>
+</head>
+<body>
+<noscript>
+  <div id="noscript">YOU SHOULD ENABLE JAVASCIRPT, BRO</div>
+</noscript>
+  <div style="width: 100%; text-align: center; position: fixed; top: 0; left: 0; background-color: #d0d0d0;">
+    <div id="header">
+      <a href="/"><div id="opaque">Incremental Evolution</div></a>
+      <div id="small">One step at a time.</div>
+    </div>
+    <div id="postheader"></div>
+    <div id="faketop"></div>
+  </div>
+  {{ content }}
+  <div style="width: 100%; text-align: center; margin: 10px 0 5px 0;">
+    <div id="copyriot">
+      <del>&copy; {{ 'now' | date: "%Y" }}</del> The original content on this site is not copyrighted. Anyone may copy it for any purpose.
+    </span>
+  </div>
+</body>
+</html>
