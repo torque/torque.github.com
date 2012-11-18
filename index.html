@@ -1,12 +1,14 @@
 ---
-layout: header
+layout: header1
 title: Incremental Evolution
 ---
 <div style="width: 100%; text-align: center;">
   <div id="allposts">
     {% for post in site.posts %}
-        <span class="title"><a href="{{ post.url }}">{{ post.title }}</a></span>
+      <a href="{{ post.url }}"><div class="row">
+        <span class="title">{{ post.title }}</span>
         <span class="date">{{ post.date | date: "%Y.%m.%d" }}</span><br>
+      </div></a>
     {% endfor %}
   </div>
 </div>
