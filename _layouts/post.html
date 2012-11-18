@@ -1,10 +1,15 @@
 ---
-layout: header
+layout: header2
 ---
 <div style="width: 100%; text-align: center;">
   <div id="postbody">
     <div id="posttitle">{{ page.title }}</div>
+    <div id="postdates">
+      <span class="datelabel" id="created">Created &#x2014; {{ page.date | date: "%Y.%m.%d (%H:%M)" }}</span><br/>
+      {% if page.updated %}
+      <span class="datelabel" id="modified">Modified &#x2014; {{ page.updated | date: "%Y.%m.%d (%H:%M)" }}</span><br />
+      {% endif %}
+    </div>
     <div id="content">{{ content }}</div>
   </div>
 </div>
-<p></p>
